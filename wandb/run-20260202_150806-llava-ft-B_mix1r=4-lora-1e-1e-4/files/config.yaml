@@ -1,0 +1,633 @@
+_name_or_path:
+    value: /data_lyn/LLaVARadWeightNeoRed/vicuna-7b-v1.5
+_wandb:
+    value:
+        cli_version: 0.23.1
+        e:
+            nd0w7wut12kuho2qbs2681hmzwdaibz4:
+                args:
+                    - --local_rank=0
+                    - --deepspeed
+                    - /data_lyn/MedEvalKit/DQ_LLaVA/zero2.json
+                    - --lora_enable
+                    - "True"
+                    - --lora_alpha
+                    - "128"
+                    - --lora_r
+                    - "64"
+                    - --model_name_or_path
+                    - /data_lyn/LLaVARadWeightNeoRed/vicuna-7b-v1.5
+                    - --version
+                    - v1
+                    - --data_path
+                    - '{/data_lyn/data/NeoCXR/train.json,/data_lyn/data/IU_XRAY/train.json,/data_lyn/data/MIMIC_CXR/train3000.json}'
+                    - --eval_data_path
+                    - '{/data_lyn/data/NeoCXR/test.json,/data_lyn/data/IU_XRAY/val.json,/data_lyn/data/MIMIC_CXR/val.json}'
+                    - --loader
+                    - NeoCXRClinicTokenMix
+                    - --image_folder
+                    - /data_lyn/MedEvalKit/utils
+                    - --vision_tower
+                    - biomedclip_cxr_518
+                    - --vision_tower_config
+                    - /data_lyn/LLaVARadWeightNeoRed/biomedclipcxr_518.json
+                    - --vision_tower_checkpoint
+                    - /data_lyn/LLaVARadWeightNeoRed/biomedclipcxr_518_checkpoint.pt
+                    - --mm_projector_type
+                    - mlp2x_gelu
+                    - --mm_vision_select_layer
+                    - "-2"
+                    - --mm_use_im_start_end
+                    - "False"
+                    - --mm_use_im_patch_token
+                    - "False"
+                    - --max_image_num
+                    - "1"
+                    - --bf16
+                    - "True"
+                    - --output_dir
+                    - /data_lyn/Neo_Red/checkpoints/B_mix1r=4-lora-1e-1e-4
+                    - --output_attentions
+                    - "False"
+                    - --output_hidden_states
+                    - "False"
+                    - --num_train_epochs
+                    - "1"
+                    - --per_device_train_batch_size
+                    - "4"
+                    - --per_device_eval_batch_size
+                    - "1"
+                    - --gradient_accumulation_steps
+                    - "1"
+                    - --evaluation_strategy
+                    - steps
+                    - --eval_steps
+                    - "100"
+                    - --save_strategy
+                    - epoch
+                    - --save_steps
+                    - "1"
+                    - --save_total_limit
+                    - "1"
+                    - --learning_rate
+                    - "1e-4"
+                    - --weight_decay
+                    - "0."
+                    - --warmup_ratio
+                    - "0.1"
+                    - --lr_scheduler_type
+                    - cosine
+                    - --logging_steps
+                    - "1"
+                    - --tf32
+                    - "True"
+                    - --model_max_length
+                    - "4096"
+                    - --gradient_checkpointing
+                    - "True"
+                    - --lazy_preprocess
+                    - "True"
+                    - --dataloader_num_workers
+                    - "4"
+                    - --run_name
+                    - B_mix1r=4-lora-1e-1e-4
+                    - --num_diseases
+                    - "8"
+                    - --findings_loss_weight
+                    - "0."
+                    - --llm_loss_weight
+                    - "1.0"
+                    - --diagnosis_loss_weight
+                    - "0."
+                    - --align_loss_weight
+                    - "0."
+                    - --report_to
+                    - wandb
+                codePath: llava/train/train_mem.py
+                codePathLocal: llava/train/train_mem.py
+                cpu_count: 90
+                cpu_count_logical: 66
+                cudaVersion: "12.8"
+                disk:
+                    /:
+                        total: "94524579840"
+                        used: "54469419008"
+                email: 123lynnnnn@gmail.com
+                executable: /root/miniconda3/envs/NeoRed/bin/python3.10
+                gpu: NVIDIA H20
+                gpu_count: 4
+                gpu_nvidia:
+                    - architecture: Hopper
+                      cudaCores: 9984
+                      memoryTotal: "102625181696"
+                      name: NVIDIA H20
+                      uuid: GPU-b33197fd-813e-b8a0-2835-584afc1e1c69
+                    - architecture: Hopper
+                      cudaCores: 9984
+                      memoryTotal: "102625181696"
+                      name: NVIDIA H20
+                      uuid: GPU-817359a2-c756-c1dd-75ea-d82b8d1a789e
+                    - architecture: Hopper
+                      cudaCores: 9984
+                      memoryTotal: "102625181696"
+                      name: NVIDIA H20
+                      uuid: GPU-57a776a1-65e9-4352-eb11-3e403008abfd
+                    - architecture: Hopper
+                      cudaCores: 9984
+                      memoryTotal: "102625181696"
+                      name: NVIDIA H20
+                      uuid: GPU-035bb3db-3d05-34f0-f644-3fcc4091ae52
+                host: di-20251223223338-n54bs
+                memory:
+                    total: "960059408384"
+                os: Linux-5.4.250-9-velinux1u2-amd64-x86_64-with-glibc2.35
+                program: /data_lyn/Neo_Red/llava/train/train_mem.py
+                python: CPython 3.10.0
+                root: /data_lyn/Neo_Red
+                startedAt: "2026-02-02T15:08:06.107639Z"
+                writerId: nd0w7wut12kuho2qbs2681hmzwdaibz4
+        m:
+            - "1": train/global_step
+              "6":
+                - 3
+              "7": []
+            - "2": '*'
+              "5": 1
+              "6":
+                - 1
+              "7": []
+        python_version: 3.10.0
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 51
+                - 53
+                - 63
+                - 71
+                - 98
+                - 105
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 51
+                - 53
+                - 63
+                - 71
+                - 98
+                - 105
+            "3":
+                - 7
+                - 13
+                - 14
+                - 66
+            "4": 3.10.0
+            "5": 0.23.1
+            "6": 4.31.0
+            "12": 0.23.1
+            "13": linux-x86_64
+adafactor:
+    value: false
+adam_beta1:
+    value: 0.9
+adam_beta2:
+    value: 0.999
+adam_epsilon:
+    value: 1e-08
+add_cross_attention:
+    value: false
+align_loss_weight:
+    value: 0
+architectures:
+    value:
+        - LlamaForCausalLM
+auto_find_batch_size:
+    value: false
+bad_words_ids:
+    value: null
+begin_suppress_tokens:
+    value: null
+bf16:
+    value: true
+bf16_full_eval:
+    value: false
+bits:
+    value: 16
+bos_token_id:
+    value: 1
+cache_dir:
+    value: None
+chunk_size_feed_forward:
+    value: 0
+cross_attention_hidden_size:
+    value: null
+data_seed:
+    value: None
+dataloader_drop_last:
+    value: false
+dataloader_num_workers:
+    value: 4
+dataloader_pin_memory:
+    value: true
+ddp_backend:
+    value: None
+ddp_broadcast_buffers:
+    value: None
+ddp_bucket_cap_mb:
+    value: None
+ddp_find_unused_parameters:
+    value: None
+ddp_timeout:
+    value: 1800
+debug:
+    value: '[]'
+decoder_start_token_id:
+    value: null
+deepspeed:
+    value: /data_lyn/MedEvalKit/DQ_LLaVA/zero2.json
+dev_end_token_id:
+    value: 32002
+dev_token_id:
+    value: 32001
+diagnosis_loss_weight:
+    value: 0
+disable_tqdm:
+    value: false
+diversity_penalty:
+    value: 0
+do_eval:
+    value: true
+do_predict:
+    value: false
+do_sample:
+    value: false
+do_train:
+    value: false
+double_quant:
+    value: true
+early_stopping:
+    value: false
+encoder_no_repeat_ngram_size:
+    value: 0
+eos_token_id:
+    value: 2
+eval_accumulation_steps:
+    value: None
+eval_batch_size:
+    value: 1
+eval_delay:
+    value: 0
+eval_steps:
+    value: 100
+evaluation_strategy:
+    value: steps
+exponential_decay_length_penalty:
+    value: null
+findings_loss_weight:
+    value: 0
+finetuning_task:
+    value: null
+forced_bos_token_id:
+    value: null
+forced_eos_token_id:
+    value: null
+fp16:
+    value: false
+fp16_backend:
+    value: auto
+fp16_full_eval:
+    value: false
+fp16_opt_level:
+    value: O1
+freeze_mm_mlp_adapter:
+    value: false
+fsdp:
+    value: '[]'
+fsdp_config:
+    value: '{''fsdp_min_num_params'': 0, ''xla'': False, ''xla_fsdp_grad_ckpt'': False}'
+fsdp_min_num_params:
+    value: 0
+fsdp_transformer_layer_cls_to_wrap:
+    value: None
+full_determinism:
+    value: false
+gradient_accumulation_steps:
+    value: 1
+gradient_checkpointing:
+    value: true
+greater_is_better:
+    value: None
+group_by_length:
+    value: false
+group_by_modality_length:
+    value: false
+half_precision_backend:
+    value: auto
+hidden_act:
+    value: silu
+hidden_size:
+    value: 4096
+hub_model_id:
+    value: None
+hub_private_repo:
+    value: false
+hub_strategy:
+    value: every_save
+hub_token:
+    value: <HUB_TOKEN>
+id2label:
+    value:
+        "0": LABEL_0
+        "1": LABEL_1
+ignore_data_skip:
+    value: false
+image_aspect_ratio:
+    value: pad
+image_grid_pinpoints:
+    value: null
+image_token_id:
+    value: 32000
+include_inputs_for_metrics:
+    value: false
+initializer_range:
+    value: 0.02
+intermediate_size:
+    value: 11008
+is_decoder:
+    value: false
+is_encoder_decoder:
+    value: false
+jit_mode_eval:
+    value: false
+label_names:
+    value: None
+label_smoothing_factor:
+    value: 0
+label2id:
+    value:
+        LABEL_0: 0
+        LABEL_1: 1
+learning_rate:
+    value: 0.0001
+length_column_name:
+    value: length
+length_penalty:
+    value: 1
+llm_loss_weight:
+    value: 1
+load_best_model_at_end:
+    value: false
+local_rank:
+    value: 0
+log_level:
+    value: passive
+log_level_replica:
+    value: warning
+log_on_each_node:
+    value: true
+logging_dir:
+    value: /data_lyn/Neo_Red/checkpoints/B_mix1r=4-lora-1e-1e-4/runs/Feb02_15-02-30_di-20251223223338-n54bs
+logging_first_step:
+    value: false
+logging_nan_inf_filter:
+    value: true
+logging_steps:
+    value: 1
+logging_strategy:
+    value: steps
+lora_alpha:
+    value: 128
+lora_bias:
+    value: none
+lora_dropout:
+    value: 0.05
+lora_enable:
+    value: true
+lora_r:
+    value: 64
+lora_weight_path:
+    value: ""
+lr_scheduler_type:
+    value: cosine
+max_grad_norm:
+    value: 1
+max_length:
+    value: 20
+max_position_embeddings:
+    value: 4096
+max_steps:
+    value: -1
+metric_for_best_model:
+    value: None
+min_length:
+    value: 0
+mm_hidden_size:
+    value: 768
+mm_projector_type:
+    value: mlp2x_gelu
+mm_use_im_patch_token:
+    value: false
+mm_use_im_start_end:
+    value: false
+mm_vision_select_feature:
+    value: patch
+mm_vision_select_layer:
+    value: -2
+mm_vision_tower:
+    value: biomedclip_cxr_518
+mm_vision_tower_checkpoint:
+    value: /data_lyn/LLaVARadWeightNeoRed/biomedclipcxr_518_checkpoint.pt
+mm_vision_tower_config:
+    value: /data_lyn/LLaVARadWeightNeoRed/biomedclipcxr_518.json
+model_max_length:
+    value: 4096
+model_type:
+    value: llavarad
+mp_parameters:
+    value: ""
+mpt_attn_impl:
+    value: triton
+no_cuda:
+    value: false
+no_repeat_ngram_size:
+    value: 0
+num_attention_heads:
+    value: 32
+num_beam_groups:
+    value: 1
+num_beams:
+    value: 1
+num_diseases:
+    value: 8
+num_hidden_layers:
+    value: 32
+num_key_value_heads:
+    value: 32
+num_return_sequences:
+    value: 1
+num_train_epochs:
+    value: 1
+optim:
+    value: adamw_torch
+optim_args:
+    value: None
+output_attentions:
+    value: false
+output_dir:
+    value: /data_lyn/Neo_Red/checkpoints/B_mix1r=4-lora-1e-1e-4
+output_hidden_states:
+    value: false
+output_scores:
+    value: false
+overwrite_output_dir:
+    value: false
+pad_token_id:
+    value: 0
+past_index:
+    value: -1
+per_device_eval_batch_size:
+    value: 1
+per_device_train_batch_size:
+    value: 4
+per_gpu_eval_batch_size:
+    value: None
+per_gpu_train_batch_size:
+    value: None
+peri_end_token_id:
+    value: 32004
+peri_token_id:
+    value: 32003
+phys_end_token_id:
+    value: 32006
+phys_token_id:
+    value: 32005
+prediction_loss_only:
+    value: false
+prefix:
+    value: null
+pretraining_tp:
+    value: 1
+problem_type:
+    value: null
+push_to_hub:
+    value: false
+push_to_hub_model_id:
+    value: None
+push_to_hub_organization:
+    value: None
+push_to_hub_token:
+    value: <PUSH_TO_HUB_TOKEN>
+quant_type:
+    value: nf4
+ray_scope:
+    value: last
+remove_invalid_values:
+    value: false
+remove_unused_columns:
+    value: false
+repetition_penalty:
+    value: 1
+report_to:
+    value: '[''wandb'']'
+resume_from_checkpoint:
+    value: None
+return_dict:
+    value: true
+return_dict_in_generate:
+    value: false
+rms_norm_eps:
+    value: 1e-05
+rope_scaling:
+    value: null
+run_name:
+    value: B_mix1r=4-lora-1e-1e-4
+save_on_each_node:
+    value: false
+save_safetensors:
+    value: false
+save_steps:
+    value: 1
+save_strategy:
+    value: epoch
+save_total_limit:
+    value: 1
+seed:
+    value: 42
+sep_token_id:
+    value: null
+sharded_ddp:
+    value: '[]'
+skip_memory_metrics:
+    value: true
+suppress_tokens:
+    value: null
+task_specific_params:
+    value: null
+temperature:
+    value: 1
+tf_legacy_loss:
+    value: false
+tf32:
+    value: true
+tie_encoder_decoder:
+    value: false
+tie_word_embeddings:
+    value: false
+tokenizer_class:
+    value: null
+top_k:
+    value: 50
+top_p:
+    value: 1
+torch_compile:
+    value: false
+torch_compile_backend:
+    value: None
+torch_compile_mode:
+    value: None
+torch_dtype:
+    value: float16
+torchdynamo:
+    value: None
+torchscript:
+    value: false
+tpu_metrics_debug:
+    value: false
+tpu_num_cores:
+    value: None
+train_batch_size:
+    value: 4
+transformers_version:
+    value: 4.31.0
+tune_mm_mlp_adapter:
+    value: false
+typical_p:
+    value: 1
+use_bfloat16:
+    value: false
+use_cache:
+    value: false
+use_ipex:
+    value: false
+use_legacy_prediction_loop:
+    value: false
+use_mm_proj:
+    value: true
+use_mps_device:
+    value: false
+vocab_size:
+    value: 32000
+warmup_ratio:
+    value: 0.1
+warmup_steps:
+    value: 0
+weight_decay:
+    value: 0
+xpu_backend:
+    value: None

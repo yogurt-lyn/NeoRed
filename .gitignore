@@ -1,0 +1,16 @@
+# Model checkpoints / weights
+expertimentsweight/
+**/checkpoint-*/
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
+*.onnx
+
+# Training/runtime artifacts
+wandb/run-*/files/media/
+wandb/run-*/logs/
+wandb/latest-run/
+__pycache__/
+*.pyc
