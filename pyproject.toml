@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "llava"
 version = "0.1.0"
-description = "Towards GPT-4 like large language and visual assistant for radiology."
+description = "NeoRed: a knowledge-logic-alignment multimodal model for neonatal respiratory disease diagnosis."
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -48,7 +48,9 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/microsoft/LLaVA-Rad"
+"Homepage" = "https://github.com/yogurt-lyn/NeoRed"
+"Paper" = "https://arxiv.org/abs/2609.03527"
+"Repository" = "https://github.com/yogurt-lyn/NeoRed"
 
 [tool.setuptools.packages.find]
 exclude = [
