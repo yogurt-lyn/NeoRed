@@ -18,6 +18,22 @@ NeoRed introduces a **Knowledge-Logic-Alignment (KLA)** framework with three com
 - **Diagnostic Logic Constraint (DLC):** aligns generated reports with multimodal diagnostic logic.
 - **Visual Semantic Alignment (VSA):** establishes semantic correspondence between visual features and imaging conclusions.
 
+## Motivation
+
+<p align="center">
+  <img src="assets/neored-motivation.png" alt="Motivation of NeoRed" width="100%">
+</p>
+
+<p align="center"><em>Domain gaps between adult and neonatal chest X-rays and disease spectra, and the necessity of integrating chest X-rays with clinical context for accurate neonatal diagnosis.</em></p>
+
+## Method
+
+<p align="center">
+  <img src="assets/neored-framework.png" alt="Overview of the NeoRed framework" width="100%">
+</p>
+
+<p align="center"><em>Overview of NeoRed and the proposed KLA framework, including Knowledge Prior Injection, Diagnostic Logic Constraint, and Visual Semantic Alignment.</em></p>
+
 ## Main Results
 
 On the NeoCXR benchmark, NeoRed achieves:
